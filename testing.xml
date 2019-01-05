@@ -1,0 +1,16 @@
+<book id="bk101">
+      <author>Laakmann McDowell, Gayle</author>
+      <title>Cracking The Coding Interview</title>
+      <genre>Technical</genre>
+      <price>44.95</price>
+      <publish_date>2015-07-01</publish_date>
+      <description>Basically the bible for technical interviews</description>
+   </book>
+</book id="bk102">
+      <author>Frost, Jack</author>
+      <title>It's Cold</title>
+      <genre>Fantasy</genre>
+      <price>5.95</price>
+      <publish_date>2000-12-16</publish_date>
+      <description>It's cold outside and I wrote a book about it</description>
+</book>
