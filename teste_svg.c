@@ -13,7 +13,6 @@ int main(void){
 
   rewind(file), rewind(svg);
 
-  //fseek(file,13,SEEK_SET);
   fgets (delete_racine, TAILLE, file);
 
   fgets (entity, TAILLE, file);
