@@ -21,7 +21,8 @@ int main(void){
   fgets (attribute2, TAILLE, file);
   fgets (attribute3, TAILLE, file);
 
-  fputs("<?xml version=\"1.0\" standalone=\"no\" ?>\n<!DOCTYPE svg PUBLIC",svg); //Prologue et debut definition DTD public
+                                        //Prologue et debut definition DTD public
+  fputs("<?xml version=\"1.0\" standalone=\"no\" ?>\n<!DOCTYPE svg PUBLIC",svg);
   fseek(svg,0, SEEK_END);
   fputs(" \"-//W3C//DTD SVG 1.1//EN\"\n\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">", svg);
 
