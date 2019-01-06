@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+<title>MCD</title>
+
+<rect x="10" y="180" width="100" height="100" style="fill:white; stroke:black;" /> 
+<path d="M10,200 l100,0" style="stroke:black;" />
+<text x="30" y="195" style="font-size:18px;">  personne
+
+	<tspan x="20" dy="20">    nom
+</tspan>
+	<tspan x="20" dy="18">    prenom
+</tspan>
+	<tspan x="20" dy="18">    date
+</tspan>
+</text>
+<path d="M110,230 l90,0" style="stroke:black;" />
+
+<rect x="390" y="180" width="100" height="100" style="fill:white; stroke:black;" />
+<path d="M390,200 l100,0" style="stroke:black;" />
+<path d="M300,230 l90,0" style="stroke:black;" />
+<text x="410" y="195" style="font-size:18px;">  personne
+
+	<tspan x="400" dy="20">    nom
+</tspan>
+	<tspan x="400" dy="18">    prenom
+</tspan>
+	<tspan x="400" dy="18">    date
+</tspan>
+</text>
+
+<ellipse cx="250" cy="230" rx="50" ry="30" style="fill:white; stroke:black;"/>
+<text x="218" y="235" style="font-size:18px;">relation</text>
+
+<text x="110" y="225" style="font-size:18px;">(n,n)</text>
+
+<text x="352" y="225" style="font-size:18px;">(n,n)</text>
+</svg>
