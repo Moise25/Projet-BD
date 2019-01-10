@@ -1,5 +1,5 @@
 # Projet-BD
-extraire le zip fourni
+ 
 utilisation : ./XJ_Convertor [-i xml/json] [-t ][-h url_FluxHTTP] [-f FichierInput] -o nomFichier.svg
 code source : XJ_Convertor2.c
 compilation standard: gcc XJ_Convertor2.c -o XJ_Convertor par exemple
