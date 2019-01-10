@@ -2,10 +2,14 @@
 #include <string.h>
 #include <stdlib.h>
 #define TAILLE 1000
-int main(void){
-  char delete_racine[TAILLE], entity[TAILLE], attribute1[TAILLE], attribute2[TAILLE], attribute3[TAILLE];
-  FILE *file = fopen("resultat_extraction_xml", "r");
-  FILE *svg = fopen("fic_version_beta.svg", "a+");
+
+int main(int argc, char** argv){
+  char delete_racine[TAILLE], entity1[TAILLE],attribute1_1[TAILLE], attribute2_1[TAILLE], attribute3_1[TAILLE], entity2[TAILLE], attribute1_2[TAILLE], attribute2_2[TAILLE], attribute3_2[TAILLE] ;
+
+//fichier existant
+  FILE *file = fopen(argv[1], "r");
+//fichier a generer output
+  FILE *svg = fopen(argv[2], "a+");
 
   if(file==NULL) exit(1);
 
@@ -13,17 +17,21 @@ int main(void){
 
   rewind(file), rewind(svg);
 
+  //fseek(file,13,SEEK_SET);
   fgets (delete_racine, TAILLE, file);
 
-  fgets (entity, TAILLE, file);
+  fgets (entity1, TAILLE, file);
+  fgets (attribute1_1, TAILLE, file);
+  fgets (attribute2_1, TAILLE, file);
+  fgets (attribute3_1, TAILLE, file);
 
-  fgets (attribute1, TAILLE, file);
-  fgets (attribute2, TAILLE, file);
-  fgets (attribute3, TAILLE, file);
+  fgets (entity2, TAILLE, file);
+  fgets (attribute1_2, TAILLE, file);
+  fgets (attribute2_2, TAILLE, file);
+  fgets (attribute3_2, TAILLE, file);
 
-                                        //Prologue et debut definition DTD public
-  fputs("<?xml version=\"1.0\" standalone=\"no\" ?>\n<!DOCTYPE svg PUBLIC",svg);
-  fseek(svg,0, SEEK_END);
+  fputs("<?xml version=\"1.0\" standalone=\"no\" ?>\n<!DOCTYPE svg PUBLIC",svg); //Prologue et debut definition DTD public
+  //fseek(svg,0, SEEK_END);
   fputs(" \"-//W3C//DTD SVG 1.1//EN\"\n\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">", svg);
 
                                         //Corps du schema xml
@@ -35,15 +43,15 @@ int main(void){
   fputs("\n\n<rect x=\"10\" y=\"180\" width=\"100\" height=\"100\" style=\"fill:white; stroke:black;\" /> ", svg);
   fputs("\n<path d=\"M10,200 l100,0\" style=\"stroke:black;\" />", svg);
   fputs("\n<text x=\"30\" y=\"195\" style=\"font-size:18px;\">", svg);
-  fputs (entity, svg);
+  fputs (entity1, svg);
   fputs("\n\t<tspan x=\"20\" dy=\"20\">", svg);
-  fputs(attribute1, svg);
+  fputs(attribute1_1, svg);
   fputs("</tspan>", svg);
   fputs("\n\t<tspan x=\"20\" dy=\"18\">", svg);
-  fputs(attribute2, svg);
+  fputs(attribute2_1, svg);
   fputs("</tspan>", svg);
   fputs("\n\t<tspan x=\"20\" dy=\"18\">", svg);
-  fputs(attribute3, svg);
+  fputs(attribute3_1, svg);
   fputs("</tspan>", svg);
   fputs("\n</text>", svg);
 
@@ -55,26 +63,26 @@ int main(void){
   fputs("\n<path d=\"M390,200 l100,0\" style=\"stroke:black;\" />", svg);
   fputs("\n<path d=\"M300,230 l90,0\" style=\"stroke:black;\" />", svg);
   fputs("\n<text x=\"410\" y=\"195\" style=\"font-size:18px;\">", svg);
-  fputs (entity, svg);
+  fputs (entity2, svg);
   fputs("\n\t<tspan x=\"400\" dy=\"20\">", svg);
-  fputs(attribute1, svg);
+  fputs(attribute1_2, svg);
   fputs("</tspan>", svg);
   fputs("\n\t<tspan x=\"400\" dy=\"18\">", svg);
-  fputs(attribute2, svg);
+  fputs(attribute2_2, svg);
   fputs("</tspan>", svg);
   fputs("\n\t<tspan x=\"400\" dy=\"18\">", svg);
-  fputs(attribute3, svg);
+  fputs(attribute3_2, svg);
   fputs("</tspan>", svg);
   fputs("\n</text>", svg);
 
                                        //Association
   fputs("\n\n<ellipse cx=\"250\" cy=\"230\" rx=\"50\" ry=\"30\" style=\"fill:white; stroke:black;\"/>", svg);
-  fputs("\n<text x=\"218\" y=\"235\" style=\"font-size:18px;\">relation</text>", svg);
+  fputs("\n<text x=\"218\" y=\"235\" style=\"font-size:18px;\">realiser</text>", svg);
 
                                         //Cardinalité
-  fputs("\n\n<text x=\"110\" y=\"225\" style=\"font-size:18px;\">(n,n)</text>", svg);
+  fputs("\n\n<text x=\"110\" y=\"225\" style=\"font-size:18px;\">(1,n)</text>", svg);
 
-  fputs("\n\n<text x=\"352\" y=\"225\" style=\"font-size:18px;\">(n,n)</text>", svg);
+  fputs("\n\n<text x=\"352\" y=\"225\" style=\"font-size:18px;\">(0,n)</text>", svg);
 
   fputs("\n</svg>", svg);
 

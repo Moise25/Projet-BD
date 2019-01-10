@@ -1,0 +1,20 @@
+<repertoire>
+	<personne id="101">
+		<nom> diaham </nom>
+		<prenom> amadou </prenom>
+		<date> 1997-09-11 </date>	
+		<adresse> 21 cité courp supreme </adresse>
+	</personne>
+	<personne id="102">
+		<nom> lo </nom>
+		<prenom> fatou</prenom>
+		<date> 1997-09-11 </date>	
+		<adresse> mariste </adresse>
+	</personne>
+	<personne id="103">
+		<nom> seck </nom>
+		<prenom> moussa </prenom>
+		<date> 1997-09-11 </date>	
+		<adresse> rrr </adresse>
+	</personne>
+</repertoire>
