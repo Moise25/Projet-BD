@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"  standalone="no" ?>
+
+<reverse_engineering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+    <Etudiant>
+        <nom>Kh. Diaham</nom>
+        <prenom>Amadou</prenom>
+        <n_i_e>250</n_i_e>
+    </Etudiant>
+    <Projet>
+        <libelle>XML/JSON -> SVG</libelle>
+        <ultimatum>Doit etre livré après 3 semaines</ultimatum>
+        <superviseur>M. A. B. MBACKE</superviseur>
+    </Projet>
+</reverse_engineering>
