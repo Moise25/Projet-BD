@@ -29,7 +29,7 @@ int main(int argc, char** argv){
   fgets (attribute2_2, TAILLE, file);
   fgets (attribute3_2, TAILLE, file);
 
-								//Prologue et debut definition DTD public
+					//Prologue et debut definition DTD public
   fputs("<?xml version=\"1.0\" standalone=\"no\" ?>\n<!DOCTYPE svg PUBLIC",svg);
   fputs(" \"-//W3C//DTD SVG 1.1//EN\"\n\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">", svg);
 
