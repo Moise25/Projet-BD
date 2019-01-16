@@ -1,0 +1,12 @@
+{ 
+"Client": {
+	"id" : "101",
+	"prenom" : "amadou",
+	"nom" : "diaham"
+},
+"produit" : {
+	"couleur" : "noir",
+	"produit" : "portable",
+	"num_prod" : "44"
+}
+}
